@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Safety Awareness | Secure Your Digital Life</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;    /* Deep Dark Blue */
+      --secondary: #3b82f6;  /* Modern Blue */
+      --accent: #10b981;     /* Success Green */
+      --warning: #f59e0b;    /* Warning Gold */
+      --danger: #ef4444;     /* Emergency Red */
+      --bg: #f8fafc;         /* Light Grey/White */
+      --text: #1e293b;
+    }
+
+    * {
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #1e293b);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      letter-spacing: -1px;
+    }
+
+    header p {
+      opacity: 0.9;
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: -40px auto 40px;
+      padding: 0 20px;
+    }
+
+    section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-top: 4px solid var(--secondary);
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+    }
+
+    ul li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: bold;
+      margin-right: 15px;
+    }
+
+    .alert {
+      background: #fffbeb;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px dashed var(--warning);
+      margin-top: 20px;
+    }
+
+    .btn-report {
+      display: inline-block;
+      background: var(--danger);
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .btn-report:hover {
+      background: #dc2626;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    }
+
+    .contact-box {
+      text-align: center;
+      background: var(--primary);
+      color: white;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      .container { margin-top: -20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Cyber Safety Awareness</h1>
+  <p>Protecting Your Digital Footprint in the Modern Age</p>
+</header>
+
+<div class="container">
+  <section>
+    <h2>🛡️ Cyber Safety kya hoti hai?</h2>
+    <p>Cyber Safety ka seedha matlab hai—<strong>Satark Rehna</strong>. Internet ka istemal karte waqt apni niji jankari (Personal Info), passwords aur digital assets ko hackers aur scammers se bachana hi Cyber Safety hai.</p>
+  </section>
+
+  <section>
+    <h2>⚠️ Common Online Threats</h2>
+    <ul>
+      <li>Phishing Emails & Fraudulent Messages</li>
+      <li>Financial Scams & Impersonation Calls</li>
+      <li>Weak Passwords & Account Takeovers</li>
+      <li>Malicious Websites & Cloned Apps</li>
+      <li>Social Engineering & Identity Theft</li>
+    </ul>
+  </section>
+
+  <section style="border-top-color: var(--accent);">
+    <h2>✅ Smart Safety Tips</h2>
+    <ul>
+      <li><strong>Strong Passwords:</strong> Mix letters, numbers, and symbols.</li>
+      <li><strong>Privacy First:</strong> Kabhi bhi OTP ya Password share na karein.</li>
+      <li><strong>Think Before Click:</strong> Unknown links par click karna khatarnak ho sakta hai.</li>
+      <li><strong>Public WiFi:</strong> Banking transactions hamesha personal data par karein.</li>
+      <li><strong>2FA:</strong> Two-Factor Authentication har app par on karein.</li>
+    </ul>
+  </section>
+
+  <section style="border-top-color: var(--danger);">
+    <h2>🚨 Emergency: Cyber Crime Report</h2>
+    <div class="alert">
+      <p>Agar aapke saath koi fraud hota hai, toh ghabrayein nahi. Yeh steps follow karein:</p>
+      <p><strong>1. Evidence:</strong> Screenshots, emails, aur transaction IDs safe rakhein.</p>
+      <p><strong>2. Contact:</strong> National Cyber Crime Helpline number <b>1930</b> par call karein.</p>
+      <a href="https://cybercrime.gov.in" class="btn-report" target="_blank">Report Online Now</a>
+    </div>
+  </section>
+
+  <div class="contact-box">
+    <h3>Need Help or Workshops?</h3>
+    <p>Email: <strong>mohammadsuaib7860@gmail.com</strong></p>
+    <p style="font-size: 0.8rem; opacity: 0.7;">Made with Safety in Mind © 2024</p>
+  </div>
+
+  <footer>
+    <p>Stay Safe Online | Designed for Awareness</p>
+  </footer>
+</div>
+
+</body>
+</html>

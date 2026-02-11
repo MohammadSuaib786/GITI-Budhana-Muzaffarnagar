@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | ITI COPA Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            padding: 20px;
+            color: #1e293b;
+        }
+
+        .header-section {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header-section h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        /* Team Grid Layout */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .member-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border-bottom: 5px solid #e2e8f0;
+        }
+
+        .member-card:hover {
+            transform: translateY(-10px);
+            border-bottom-color: var(--secondary);
+        }
+
+        .member-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .member-card h2 {
+            margin: 10px 0 5px;
+            font-size: 1.5rem;
+        }
+
+        .role {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .bio {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            min-height: 80px;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: var(--primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .social-icons a {
+            color: #94a3b8;
+            margin: 0 10px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary);
+        }
+
+        .back-btn {
+            display: block;
+            width: fit-content;
+            margin: 50px auto;
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-section">
+        <h1>Our Creative Team</h1>
+        <p>ITI COPA Students & Web Developers</p>
+    </div>
+
+    <div class="team-grid">
+        
+        <div class="member-card">
+            <img src="Images/My.png" alt="Mohammad Suaib">
+            <h2>Mohammad Sueb</h2>
+            <span class="role">Lead Developer</span>
+            <p class="bio">Main ITI COPA student hoon aur mujhe Web Dev aur Cyber Security me interest hai. Maine is project ka UI design kiya hai.</p>
+            <div class="skills-tags">
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Java Basic</span>
+                <span class="tag">Linux</span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href=""><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:mohammadsuaib7860@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <img src="Images/mashi.png" alt="Team Member">
+            <h2>Manshi Thakur</h2>
+            <span class="role">Content Writer</span>
+            <p class="bio">Maine is project ka sare notes content aur research work handle kiya hai taaki logon ko sahi jankari mile.</p>
+            <div class="skills-tags">
+                <span class="tag">Research</span>
+                <span class="tag">Documentation</span>
+                <span class="tag">Word</span>
+            </div>
+            <div class="social-icons">
+                <a href="mailto:mashithakur4205@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/manshi-thakur-554734274?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
+              
+            </div>
+        </div>
+
+        <div class="member-card">
+            <img src="Images/manu.png" alt="Team Member">
+            <h2>Manu Kushwaha</h2>
+            <span class="role">UI/UX Assistant</span>
+            <p class="bio">Mera kaam design ko responsive banana aur testing karna tha taaki website har mobile par sahi chale.</p>
+            <div class="skills-tags">
+                <span class="tag">Testing</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Mobile Fixes</span>
+            </div>
+            <div class="social-icons">
+                <a href="mailto:Pundirmanu84@gmail.com"><i class="fas fa-envelope"></i></a>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Main Project</a>
+
+</body>
+</html>

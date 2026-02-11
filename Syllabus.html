@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Syllabus Guide | ITI COPA Professional</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Hind:wght@400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #2563eb;
+      --secondary: #64748b;
+      --accent: #3b82f6;
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --white: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', 'Hind', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* Professional Header Gradient */
+    header {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    header p {
+      opacity: 0.9;
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: -40px auto 40px;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    /* Professional Card Design */
+    .card {
+      background: var(--white);
+      padding: 30px;
+      border-radius: 16px;
+      border: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    }
+
+    /* Highlight first card to take full width */
+    .card-full {
+      grid-column: 1 / -1;
+      border-left: 5px solid var(--primary);
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 1.4rem;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 2px solid #eff6ff;
+      padding-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+      position: relative;
+      padding-left: 25px;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    /* Custom Checkmark Bullets */
+    ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 50px;
+    }
+
+    footer a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .email-box {
+      background: #1e293b;
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      .container { margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Syllabus Guide</h1>
+  <p>Technical Education & Career Roadmap</p>
+</header>
+
+<div class="container">
+  <div class="card card-full">
+    <h2>🖥 ITI COPA Trade Overview</h2>
+    <p>COPA (Computer Operator and Programming Assistant) ek vocational training program hai jo students ko digital world aur technical skills ke liye taiyar karta hai.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+      <ul>
+        <li>Advanced Computing Basics</li>
+        <li>Windows & Linux OS</li>
+        <li>MS Office Suite Expert</li>
+        <li>App Development (Java)</li>
+      </ul>
+      <ul>
+        <li>Web Development (HTML/JS)</li>
+        <li>Database Management (MySQL)</li>
+        <li>Network & Cyber Security</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📚 Theory Focus</h2>
+    <ul>
+      <li><b>Trade Theory:</b> Core technical concepts</li>
+      <li><b>Employability Skills:</b> Soft skills & Communication</li>
+     
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🛠 Practical Training</h2>
+    <ul>
+      <li>Full Stack Programming</li>
+      <li>Professional Typing (Bilingual)</li>
+      <li>Live Project Work</li>
+      <li>Lab Management & Setup</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>💼 Career Pathways</h2>
+    <ul>
+      <li>Government/Private Office Assistant</li>
+      <li>Database Administrator</li>
+      <li>Junior Web Developer</li>
+      <li>Data Entry Specialist</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>🚀 Next Steps</h2>
+    <ul>
+      <li>Polytechnic Diploma</li>
+      <li>Advanced Cloud Computing</li>
+      <li>Cyber Security Certification</li>
+      <li>Bachelor in Computer App (BCA)</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>For more information, feel free to reach out:</p>
+  <div class="email-box">
+    Email: <a href="mailto:mohammadsuaib7860@gmail.com">mohammadsuaib7860@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
