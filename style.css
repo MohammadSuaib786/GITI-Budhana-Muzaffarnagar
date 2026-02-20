@@ -229,3 +229,69 @@ footer {
     display: none;
   }
 }
+/* Registration Button in Nav */
+.nav-reg-btn {
+    background: #38bdf8;
+    color: #0f172a !important;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+}
+.nav-reg-btn:hover { background: white !important; }
+
+/* Trade Container Styling */
+.trade-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.trade-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-top: 5px solid #38bdf8;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.trade-box:hover { transform: translateY(-5px); }
+
+.trade-icon { font-size: 2.2rem; color: #38bdf8; margin-bottom: 15px; }
+
+.trade-box h3 { font-size: 1.5rem; margin-bottom: 12px; color: #0f172a; }
+
+.trade-box p { color: #64748b; line-height: 1.6; margin-bottom: 20px; font-size: 0.95rem; flex-grow: 1; }
+
+/* Trade Footer with Link */
+.trade-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 15px;
+}
+
+.trade-tag {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.read-more-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.read-more-link:hover { color: #0f172a; }
+
+.read-more-link i { font-size: 0.8rem; margin-left: 5px; }

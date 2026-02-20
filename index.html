@@ -18,6 +18,8 @@
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="note.html">Notes</a></li>
       <li><a href="Syllabus.html">Syllabus</a></li>
+      <li><a href="#about-trades">About ITI/COPA</a></li>
+      <li><a href="https://www.upiti.in/" target="_blank" class="nav-reg-btn">Registration</a></li>
       <li><a href="about.html">About Us</a></li>
     </ul>
     <div class="hamburger" id="mobile-menu">
@@ -37,10 +39,33 @@
   </header>
 
   <main class="container" id="portal">
+
+    <h2 class="section-title" id="about-trades">Trade Overview</h2>
+    <div class="trade-container">
+      <div class="trade-box">
+        <div class="trade-icon"><i class="fa-solid fa-building-columns"></i></div>
+        <h3>About ITI</h3>
+        <p>Industrial Training Institute (ITI) ka maqsad students ko technical skills sikhana hai. Ye vocational training provide karta hai jo industry standards ke mutabiq hoti hai.</p>
+        <div class="trade-footer">
+            <span class="trade-tag">Skill India</span>
+            <a href="http://update.vppup.in/NewVersionApp/Profile/ViewReportByITICodePublic?j=445" class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="trade-box">
+        <div class="trade-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>About COPA</h3>
+        <p>Computer Operator and Programming Assistant (COPA) ek professional trade hai jisme computer software, hardware, aur programming ki training milti hai.</p>
+        <div class="trade-footer">
+            <span class="trade-tag">Digital India</span>
+            <a href="about-copa.html" class="read-more-link">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+
     <h2 class="section-title">Student Services</h2>
     
     <section class="cards">
-      
       <div class="card">
         <div class="card-icon"><i class="fa-solid fa-note-sticky"></i></div>
         <h2>Notes Viewer</h2>
@@ -82,7 +107,6 @@
         <p>Know more about our mission and vision for ITI students.</p>
         <a href="about.html" class="card-btn btn-alt">Contact Us</a>
       </div>
-
     </section>
   </main>
 
@@ -91,39 +115,33 @@
       <p>&copy; 2026 | Developed with <i class="fa-solid fa-heart" style="color: #e74c3c;"></i> by Mohammad Sueb</p>
       <div class="footer-links">
         <a href="https://github.com/MohammadSuaib786" target="_blank"><i class="fa-brands fa-github"></i></a>
-<a href="https://www.linkedin.com/in/mohammad-sueb-b97514324?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
-            <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:mohammadsuaib7860@gmail.com">
-            <i class="fas fa-envelope"></i>
-        </a>
+        <a href="https://www.linkedin.com/in/mohammad-sueb-b97514324" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:mohammadsuaib7860@gmail.com"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    const hamburger = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = hamburger.querySelector('i');
+      if (navLinks.classList.contains('active')) {
+        icon.classList.replace('fa-bars', 'fa-xmark');
+      } else {
+        icon.classList.replace('fa-xmark', 'fa-bars');
+      }
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+        hamburger.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+      }
+    });
+  </script>
 </body>
-<script>
-  const hamburger = document.getElementById('mobile-menu');
-  const navLinks = document.querySelector('.nav-links');
-
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-
-    const icon = hamburger.querySelector('i');
-
-    if (navLinks.classList.contains('active')) {
-      icon.classList.replace('fa-bars', 'fa-xmark');
-    } else {
-      icon.classList.replace('fa-xmark', 'fa-bars');
-    }
-  });
-
-  document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('active');
-      hamburger.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
-    }
-  });
-</script>
 </html>
