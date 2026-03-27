@@ -3,82 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ITI Student Helper Portal</title>
+  <title>ITI Student Helper Portal | GITI Budhana</title>
+  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <div class="header-content">
-      <h1>ITI Student Helper Portal</h1>
-      <p>Your Complete Guide for COPA ITI Trades</p>
+  <nav class="navbar">
+    <div class="logo">GITI <span>Budhana</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="note.html">Notes</a></li>
+      <li><a href="Syllabus.html">Syllabus</a></li>
+      <li><a href="about.html">About Us</a></li>
+    </ul>
+    <div class="hamburger" id="mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>ITI Student Helper Portal</h1>
+        <p class="subtitle">Your Complete Guide for COPA ITI Trades</p>
+        <div class="institute-tag">Building Skills, Empowering Future</div>
+        <a href="#portal" class="btn-primary">Explore Portal</a>
+      </div>
     </div>
   </header>
 
-  <div class="banner">
-    <div class="banner-overlay">
-      <h2>GITI Budhana, Muzaffarnagar</h2>
-      <p>Building Skills, Empowering Future</p>
-      
-    </div>
-  </div>
-
-  <main class="container">
+  <main class="container" id="portal">
+    <h2 class="section-title">Student Services</h2>
+    
     <section class="cards">
       
-
       <div class="card">
-        <div class="icon">📝</div>
+        <div class="card-icon"><i class="fa-solid fa-note-sticky"></i></div>
         <h2>Notes Viewer</h2>
-        <p>Handwritten notes and verified PDF materials.</p>
-        <a href="note.html"><button class="btn">View Notes</button></a>
+        <p>Handwritten notes and verified PDF materials for daily study.</p>
+        <a href="note.html" class="card-btn">View Notes</a>
       </div>
 
       <div class="card">
-        <div class="icon"><i class="fa-solid fa-file-circle-question"></i></div>
+        <div class="card-icon"><i class="fa-solid fa-file-circle-question"></i></div>
         <h2>Study Material</h2>
-        <p>Download CTS Books & Question Papers</p>
-        <a href="https://bharatskills.gov.in/Home/StudyMaterial?var=JIxDimHuy9umQFlgP7QPkA==&Default=YES">
-          <button class="btn">Download</button>
-        </a>
+        <p>Download CTS Books & Previous Year Question Papers.</p>
+        <a href="https://bharatskills.gov.in/Home/StudyMaterial?var=JIxDimHuy9umQFlgP7QPkA==&Default=YES" target="_blank" class="card-btn">Download</a>
       </div>
 
       <div class="card">
-        <div class="icon"><i class="fa-solid fa-computer"></i></div>
+        <div class="card-icon"><i class="fa-solid fa-computer"></i></div>
         <h2>Software Guide</h2>
-        <p>Compiler, tools & technical setup guide.</p>
-        <a href="Software.html"><button class="btn">Setup Now</button></a>
+        <p>Compiler, tools & professional technical setup guide.</p>
+        <a href="Software.html" class="card-btn">Setup Now</a>
       </div>
+
       <div class="card">
-        <div class="icon"><i class="fa-solid fa-book"></i></div>
+        <div class="card-icon"><i class="fa-solid fa-book"></i></div>
         <h2>Syllabus Guide</h2>
-        <p>Trade aur subjects ki full jankari detail mein.</p>
-        <a href="Syllabus.html"><button class="btn">Open Portal</button></a>
+        <p>Trade aur subjects ki full jankari detail mein yahan dekhein.</p>
+        <a href="Syllabus.html" class="card-btn">Open Portal</a>
       </div>
 
       <div class="card">
-        <div class="icon">🛡️</div>
+        <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
         <h2>Cyber Safety</h2>
-        <p>Stay safe from online frauds and scams.</p>
-        <a href="Cyber.html"><button class="btn">Read More</button></a>
+        <p>Stay safe from online frauds, scams and protect your data.</p>
+        <a href="Cyber.html" class="card-btn">Read More</a>
       </div>
 
       <div class="card">
-        <div class="icon">ℹ️</div>
+        <div class="card-icon"><i class="fa-solid fa-circle-info"></i></div>
         <h2>About Us</h2>
-        <p>Know more about our mission and vision.</p>
-        <a href="about.html"><button class="btn-alt">Contact Us</button></a>
+        <p>Know more about our mission and vision for ITI students.</p>
+        <a href="about.html" class="card-btn btn-alt">Contact Us</a>
       </div>
+
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2026 | Made with for ITI Students</p>
+    <div class="footer-content">
+      <p>&copy; 2026 | Developed with <i class="fa-solid fa-heart" style="color: #e74c3c;"></i> by Mohammad Sueb</p>
+      <div class="footer-links">
+        <a href="https://github.com/MohammadSuaib786" target="_blank"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.linkedin.com/in/mohammad-sueb-b97514324?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:mohammadsuaib7860@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+<script>
+  const hamburger = document.getElementById('mobile-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+
+    const icon = hamburger.querySelector('i');
+
+    if (navLinks.classList.contains('active')) {
+      icon.classList.replace('fa-bars', 'fa-xmark');
+    } else {
+      icon.classList.replace('fa-xmark', 'fa-bars');
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('active');
+      hamburger.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
+    }
+  });
+</script>
 </html>
