@@ -2,58 +2,151 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Guide | ITI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Guide | ITI Notes Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#f4f6f8;
-            margin:0;
-            padding:0;
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #6c757d;
+            --success-color: #198754;
+            --bg-body: #f8f9fa;
+            --text-dark: #212529;
+            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
-        header{
-            background:#0a58ca;
-            color:white;
-            padding:15px;
-            text-align:center;
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-body);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
         }
-        .container{
-            padding:20px;
+
+        header {
+            background: linear-gradient(135deg, #0a58ca 0%, #0d6efd 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        .software-box{
-            background:white;
-            padding:15px;
-            margin-bottom:15px;
-            border-radius:8px;
-            box-shadow:0 0 5px rgba(0,0,0,0.1);
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
-        .software-box h3{
-            color:#0a58ca;
-            margin-top:0;
+
+        header p {
+            opacity: 0.9;
+            margin-top: 8px;
+            font-weight: 400;
         }
-        .software-box p{
-            font-size:14px;
-            line-height:1.6;
+
+        .container {
+            max-width: 800px;
+            margin: -20px auto 40px;
+            padding: 0 15px;
         }
-        .download-btn{
-            display:inline-block;
-            margin-top:10px;
-            padding:8px 15px;
-            background:#198754;
-            color:white;
-            text-decoration:none;
-            border-radius:5px;
-            font-size:14px;
+
+        .software-box {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
         }
-        .download-btn:hover{
-            background:#146c43;
+
+        .software-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
-        footer{
-            text-align:center;
-          
-            background:#222;
-            color:white;
-            font-size:13px;
+
+        .software-box h3 {
+            color: var(--primary-color);
+            margin: 0 0 10px 0;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Badge for numbering */
+        .software-box h3::before {
+            content: counter(section);
+            counter-increment: section;
+            background: #e7f1ff;
+            color: var(--primary-color);
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 0.9rem;
+        }
+
+        body { counter-reset: section; }
+
+        .software-box p {
+            font-size: 14.5px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background: var(--success-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #146c43;
+        }
+
+        .outline-btn {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .outline-btn:hover {
+            background: #f0f7ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #fff;
+            color: #6c757d;
+            font-size: 13px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Responsive spacing */
+        @media (max-width: 600px) {
+            header { padding: 30px 15px; border-radius: 0 0 20px 20px; }
+            header h1 { font-size: 1.6rem; }
         }
     </style>
 </head>
@@ -61,41 +154,40 @@
 
 <header>
     <h1>Software Guide</h1>
-    <p>ITI Students ke liye Important Software List</p>
+    <p>Essential Installation Guides for ITI Students</p>
 </header>
-
-</div>
 
 <div class="container">
 
     <div class="software-box">
-        <h3>1. Microsoft Office Instalaition</h3>
-        <p>
-            Microsoft Office Instalaition Full Guide PDF
-        </p>
-        <a href="Pdfs/microsoftoffice.pdf" class="download-btn">Download Guide PDF</a>
+        <h3>Microsoft Office Installation</h3>
+        <p>Complete step-by-step guide to installing MS Office with activation tips.</p>
+        <div class="btn-group">
+            <a href="Pdfs/microsoftoffice.pdf" class="download-btn">Download PDF</a>
+        </div>
     </div>
 
     <div class="software-box">
-        <h3>2. Windows Instalaition</h3>
-        <p>
-           Microsoft Windows Instalaition Full Guide PDF
-        </p>
-        <a href="#" class="download-btn">Download Guide PDF</a>
+        <h3>Windows 10/11 Setup</h3>
+        <p>Learn how to create a bootable USB and install Windows on any PC.</p>
+        <div class="btn-group">
+            <a href="https://www.wikihow.com/Install-Windows-10" class="download-btn">Viws</a>
+        </div>
     </div>
-
-  
 
     <div class="software-box">
-        <h3>3. Web Browser (Chrome) Instalaition</h3>
-        <p>
-            Web Browser Crome Ko Install karna
-        </p>
-        <a href="#" class="download-btn">Learn More</a>
+        <h3>Google Chrome Browser</h3>
+        <p>Best practices for installing and setting up Chrome for development.</p>
+        <div class="btn-group">
+            <a href="#" class="download-btn outline-btn">Read Online</a>
+            <a href="#" class="download-btn">Download PDF</a>
+        </div>
     </div>
+
+</div>
 
 <footer>
-    © 2026 Software Guide | Smart ITI Project
+    © 2026 Smart ITI Project | Designed for Excellence
 </footer>
 
 </body>
