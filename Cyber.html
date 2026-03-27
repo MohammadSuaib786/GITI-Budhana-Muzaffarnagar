@@ -4,134 +4,134 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cyber Safety Awareness | Secure Your Digital Life</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
-      --primary: #0f172a;    /* Deep Dark Blue */
-      --secondary: #3b82f6;  /* Modern Blue */
-      --accent: #10b981;     /* Success Green */
-      --warning: #f59e0b;    /* Warning Gold */
-      --danger: #ef4444;     /* Emergency Red */
-      --bg: #f8fafc;         /* Light Grey/White */
+      --primary: #0f172a;    
+      --secondary: #3b82f6;  
+      --accent: #10b981;     
+      --warning: #f59e0b;    
+      --danger: #ef4444;     
+      --bg: #f1f5f9;         
       --text: #1e293b;
+      --white: #ffffff;
     }
 
-    * {
-      box-sizing: border-box;
-      transition: all 0.3s ease;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
+      font-family: 'Poppins', sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
 
+    /* Floating Home Button */
+    .home-btn {
+      position: fixed; top: 20px; left: 20px; background: var(--secondary);
+      color: var(--white); width: 45px; height: 45px; border-radius: 50%;
+      display: flex; justify-content: center; align-items: center;
+      text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.2); z-index: 1000; transition: 0.3s;
+    }
+    .home-btn:hover { transform: scale(1.1); background: var(--primary); }
+
     header {
-      background: linear-gradient(135deg, var(--primary), #1e293b);
+      background: linear-gradient(135deg, var(--primary) 0%, #1e293b 100%);
       color: white;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+      border-bottom: 4px solid var(--secondary);
     }
 
-    header h1 {
-      font-size: 2.5rem;
-      margin: 0;
-      letter-spacing: -1px;
-    }
-
-    header p {
-      opacity: 0.9;
-      font-weight: 300;
-      font-size: 1.1rem;
-    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; font-weight: 700; }
+    header p { opacity: 0.8; font-weight: 300; font-size: 1.1rem; color: #93c5fd; }
 
     .container {
       max-width: 900px;
-      margin: -40px auto 40px;
+      margin: -50px auto 40px;
       padding: 0 20px;
     }
 
     section {
-      background: white;
-      padding: 30px;
-      margin-bottom: 25px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      border-top: 4px solid var(--secondary);
+      background: var(--white);
+      padding: 35px;
+      margin-bottom: 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      border-left: 6px solid var(--secondary);
+      transition: 0.3s ease;
     }
 
-    section:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    }
+    section:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
 
     h2 {
       color: var(--primary);
-      margin-top: 0;
+      margin-bottom: 20px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      font-size: 1.5rem;
+      gap: 15px;
+      font-size: 1.4rem;
     }
 
-    ul {
-      list-style: none;
-      padding: 0;
-    }
+    h2 i { color: var(--secondary); }
+
+    ul { list-style: none; }
 
     ul li {
-      padding: 10px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #f1f5f9;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
+      gap: 12px;
     }
 
-    ul li::before {
-      content: "✓";
-      color: var(--accent);
-      font-weight: bold;
-      margin-right: 15px;
-    }
+    ul li i { color: var(--accent); margin-top: 5px; }
 
     .alert {
       background: #fffbeb;
       padding: 25px;
-      border-radius: 10px;
+      border-radius: 12px;
       border: 1px dashed var(--warning);
       margin-top: 20px;
     }
 
     .btn-report {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
       background: var(--danger);
       color: white;
       text-decoration: none;
-      padding: 12px 25px;
-      border-radius: 6px;
-      font-weight: bold;
-      margin-top: 15px;
+      padding: 14px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-top: 20px;
+      transition: 0.3s;
     }
 
     .btn-report:hover {
-      background: #dc2626;
-      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+      background: #b91c1c;
+      box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3);
     }
 
     .contact-box {
       text-align: center;
-      background: var(--primary);
+      background: linear-gradient(135deg, var(--primary), #1e293b);
       color: white;
-      padding: 40px;
-      border-radius: 12px;
+      padding: 50px 30px;
+      border-radius: 20px;
+      margin-top: 50px;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
     }
+
+    .contact-box h3 { font-size: 1.8rem; margin-bottom: 15px; }
 
     footer {
       text-align: center;
-      padding: 30px;
+      padding: 40px;
       font-size: 0.9rem;
       color: #64748b;
     }
@@ -139,63 +139,70 @@
     /* Responsive */
     @media (max-width: 600px) {
       header h1 { font-size: 1.8rem; }
-      .container { margin-top: -20px; }
+      .container { margin-top: -30px; }
+      section { padding: 25px; }
     }
   </style>
 </head>
 <body>
 
+<a href="index.html" class="home-btn" title="Back to Home">
+  <i class="fa-solid fa-house"></i>
+</a>
+
 <header>
-  <h1>Cyber Safety Awareness</h1>
+  <h1><i class="fa-solid fa-user-shield"></i> Cyber Safety Awareness</h1>
   <p>Protecting Your Digital Footprint in the Modern Age</p>
 </header>
 
 <div class="container">
   <section>
-    <h2>🛡️ Cyber Safety kya hoti hai?</h2>
+    <h2><i class="fa-solid fa-shield-halved"></i> Cyber Safety kya hoti hai?</h2>
     <p>Cyber Safety ka seedha matlab hai—<strong>Satark Rehna</strong>. Internet ka istemal karte waqt apni niji jankari (Personal Info), passwords aur digital assets ko hackers aur scammers se bachana hi Cyber Safety hai.</p>
   </section>
 
-  <section>
-    <h2>⚠️ Common Online Threats</h2>
+  <section style="border-left-color: var(--warning);">
+    <h2><i class="fa-solid fa-triangle-exclamation"></i> Common Online Threats</h2>
     <ul>
-      <li>Phishing Emails & Fraudulent Messages</li>
-      <li>Financial Scams & Impersonation Calls</li>
-      <li>Weak Passwords & Account Takeovers</li>
-      <li>Malicious Websites & Cloned Apps</li>
-      <li>Social Engineering & Identity Theft</li>
+      <li><i class="fa-solid fa-circle-check"></i> Phishing Emails & Fraudulent Messages</li>
+      <li><i class="fa-solid fa-circle-check"></i> Financial Scams & Impersonation Calls</li>
+      <li><i class="fa-solid fa-circle-check"></i> Weak Passwords & Account Takeovers</li>
+      <li><i class="fa-solid fa-circle-check"></i> Malicious Websites & Cloned Apps</li>
+      <li><i class="fa-solid fa-circle-check"></i> Social Engineering & Identity Theft</li>
     </ul>
   </section>
 
-  <section style="border-top-color: var(--accent);">
-    <h2>✅ Smart Safety Tips</h2>
+  <section style="border-left-color: var(--accent);">
+    <h2><i class="fa-solid fa-lightbulb"></i> Smart Safety Tips</h2>
     <ul>
-      <li><strong>Strong Passwords:</strong> Mix letters, numbers, and symbols.</li>
-      <li><strong>Privacy First:</strong> Kabhi bhi OTP ya Password share na karein.</li>
-      <li><strong>Think Before Click:</strong> Unknown links par click karna khatarnak ho sakta hai.</li>
-      <li><strong>Public WiFi:</strong> Banking transactions hamesha personal data par karein.</li>
-      <li><strong>2FA:</strong> Two-Factor Authentication har app par on karein.</li>
+      <li><i class="fa-solid fa-lock"></i> <strong>Strong Passwords:</strong> Mix letters, numbers, and symbols.</li>
+      <li><i class="fa-solid fa-eye-slash"></i> <strong>Privacy First:</strong> Kabhi bhi OTP ya Password share na karein.</li>
+      <li><i class="fa-solid fa-link-slash"></i> <strong>Think Before Click:</strong> Unknown links par click na karein.</li>
+      <li><i class="fa-solid fa-wifi"></i> <strong>Public WiFi:</strong> Banking hamesha personal data par karein.</li>
+      <li><i class="fa-solid fa-key"></i> <strong>2FA:</strong> Two-Factor Authentication har app par on karein.</li>
     </ul>
   </section>
 
-  <section style="border-top-color: var(--danger);">
-    <h2>🚨 Emergency: Cyber Crime Report</h2>
+  <section style="border-left-color: var(--danger);">
+    <h2><i class="fa-solid fa-headset"></i> Emergency: Cyber Crime Report</h2>
     <div class="alert">
-      <p>Agar aapke saath koi fraud hota hai, toh ghabrayein nahi. Yeh steps follow karein:</p>
-      <p><strong>1. Evidence:</strong> Screenshots, emails, aur transaction IDs safe rakhein.</p>
-      <p><strong>2. Contact:</strong> National Cyber Crime Helpline number <b>1930</b> par call karein.</p>
-      <a href="https://cybercrime.gov.in" class="btn-report" target="_blank">Report Online Now</a>
+      <p style="margin-bottom: 10px;">Agar aapke saath koi fraud hota hai, toh ghabrayein nahi. Yeh steps follow karein:</p>
+      <p><strong>1. Evidence:</strong> Screenshots aur transaction IDs safe rakhein.</p>
+      <p><strong>2. Contact:</strong> National Helpline <b>1930</b> par call karein.</p>
+      <a href="https://cybercrime.gov.in" class="btn-report" target="_blank">
+        <i class="fa-solid fa-gavel"></i> Report Online Now
+      </a>
     </div>
   </section>
 
   <div class="contact-box">
-    <h3>Need Help or Workshops?</h3>
-    <p>Email: <strong>mohammadsuaib7860@gmail.com</strong></p>
-    <p style="font-size: 0.8rem; opacity: 0.7;">Made with Safety in Mind © 2024</p>
+    <h3><i class="fa-solid fa-graduation-cap"></i> Cyber Awareness Portal</h3>
+    <p>Educating students to stay safe in the digital world.</p>
+    <p>&copy; 2026 | Developed with <i class="fa-solid fa-heart" style="color: #e74c3c;"></i> by Mohammad Sueb</p>
   </div>
 
   <footer>
-    <p>Stay Safe Online | Designed for Awareness</p>
+    <p>Stay Safe Online | Designed for Awareness by Mohammad Suaib</p>
   </footer>
 </div>
 

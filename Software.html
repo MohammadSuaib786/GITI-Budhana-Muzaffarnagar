@@ -3,191 +3,222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Guide | ITI Notes Portal</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Software & Windows Guide | ITI Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
     <style>
         :root {
-            --primary-color: #0d6efd;
-            --secondary-color: #6c757d;
-            --success-color: #198754;
-            --bg-body: #f8f9fa;
-            --text-dark: #212529;
-            --card-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --primary: #0ea5e9;
+            --dark: #0f172a;
+            --bg-body: #f1f5f9;
+            --white: #ffffff;
+            --accent: #6366f1;
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg-body);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+        body { background: var(--bg-body); color: #1e293b; line-height: 1.6; }
+
+        .home-btn {
+            position: fixed; top: 20px; left: 20px; background: var(--primary);
+            color: var(--dark); width: 45px; height: 45px; border-radius: 50%;
+            display: flex; justify-content: center; align-items: center;
+            text-decoration: none; box-shadow: 0 4px 15px rgba(0,0,0,0.15); z-index: 1000; transition: 0.3s;
         }
+        .home-btn:hover { transform: scale(1.1); background: var(--white); }
 
         header {
-            background: linear-gradient(135deg, #0a58ca 0%, #0d6efd 100%);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom-left-radius: 30px;
-            border-bottom-right-radius: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white; padding: 70px 20px; text-align: center; border-bottom: 5px solid var(--primary);
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
+        
+        .section-title { 
+            margin: 40px 0 20px; font-size: 1.5rem; color: var(--dark); 
+            display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #e2e8f0; padding-bottom: 5px;
         }
 
-        header p {
-            opacity: 0.9;
-            margin-top: 8px;
-            font-weight: 400;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: -20px auto 40px;
-            padding: 0 15px;
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .software-box {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 12px;
-            box-shadow: var(--card-shadow);
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            display: flex;
-            flex-direction: column;
+            background: var(--white); padding: 25px; 
+            border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex; flex-direction: column; transition: 0.3s;
+            border-top: 4px solid transparent;
         }
+        .software-box:hover { transform: translateY(-5px); border-top-color: var(--primary); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
 
-        .software-box:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        .box-header { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
+        .box-icon { font-size: 2.2rem; min-width: 50px; text-align: center; }
+
+        /* Custom Colors */
+        .win-icon { color: #0078d4; }
+        .vscode-icon { color: #007acc; }
+        .java-icon { color: #f89820; }
+        .gcc-icon { color: #ffcf00; }
+        .note-icon { color: #209c05; }
+        .office-icon { color: #d83b01; }
+        .chrome-icon { color: #4285f4; }
+        .rar-icon { color: #8b0000; }
+        .vlc-icon { color: #ff8800; }
+        .driver-icon { color: #22c55e; }
+
+        .box-content h3 { font-size: 1.1rem; color: var(--dark); font-weight: 600; }
+        .box-content p { font-size: 0.85rem; color: #64748b; margin-top: 5px; }
+
+        .btn-group { display: flex; gap: 10px; margin-top: auto; padding-top: 15px; }
+        .btn {
+            padding: 8px 12px; border-radius: 6px; text-decoration: none;
+            font-size: 12px; font-weight: 600; transition: 0.3s; flex: 1; text-align: center;
         }
+        .btn-dl { background: var(--dark); color: white; }
+        .btn-dl:hover { background: var(--primary); }
+        .btn-view { border: 1.5px solid var(--primary); color: var(--primary); }
+        .btn-view:hover { background: var(--primary); color: white; }
 
-        .software-box h3 {
-            color: var(--primary-color);
-            margin: 0 0 10px 0;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-        }
+        footer { text-align: center; padding: 50px; color: #94a3b8; font-size: 13px; }
 
-        /* Badge for numbering */
-        .software-box h3::before {
-            content: counter(section);
-            counter-increment: section;
-            background: #e7f1ff;
-            color: var(--primary-color);
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 12px;
-            font-size: 0.9rem;
-        }
-
-        body { counter-reset: section; }
-
-        .software-box p {
-            font-size: 14.5px;
-            color: #555;
-            margin-bottom: 15px;
-        }
-
-        .btn-group {
-            display: flex;
-            gap: 10px;
-        }
-
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 10px 20px;
-            background: var(--success-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 600;
-            transition: background 0.2s;
-        }
-
-        .download-btn:hover {
-            background: #146c43;
-        }
-
-        .outline-btn {
-            background: transparent;
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .outline-btn:hover {
-            background: #f0f7ff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #fff;
-            color: #6c757d;
-            font-size: 13px;
-            border-top: 1px solid #eee;
-        }
-
-        /* Responsive spacing */
-        @media (max-width: 600px) {
-            header { padding: 30px 15px; border-radius: 0 0 20px 20px; }
-            header h1 { font-size: 1.6rem; }
-        }
+        @media (max-width: 600px) { .software-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
+<a href="index.html" class="home-btn"><i class="fa-solid fa-house"></i></a>
+
 <header>
-    <h1>Software Guide</h1>
-    <p>Essential Installation Guides for ITI Students</p>
+    <h1>Master Software Hub</h1>
+    <p>Individual Installation Guides for every Tool</p>
 </header>
 
 <div class="container">
 
-    <div class="software-box">
-        <h3>Microsoft Office Installation</h3>
-        <p>Complete step-by-step guide to installing MS Office with activation tips.</p>
-        <div class="btn-group">
-            <a href="Pdfs/microsoftoffice.pdf" class="download-btn">Download PDF</a>
+    <h2 class="section-title"><i class="fa-solid fa-desktop"></i> Operating System</h2>
+    <div class="software-grid">
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon win-icon"><i class="fa-brands fa-windows"></i></div>
+                <div class="box-content"><h3>Windows 10/11</h3></div>
+            </div>
+            <p>Full OS installation guide from bootable USB to Desktop.</p>
+            <div class="btn-group">
+                <a href="https://www.howtogeek.com/197559/how-to-install-windows-10-on-your-pc/" class="btn btn-dl">Guide</a>
+                <a href="https://www.microsoft.com/software-download/" target="_blank" class="btn btn-view">Official ISO</a>
+            </div>
         </div>
     </div>
 
-    <div class="software-box">
-        <h3>Windows 10/11 Setup</h3>
-        <p>Learn how to create a bootable USB and install Windows on any PC.</p>
-        <div class="btn-group">
-            <a href="https://www.wikihow.com/Install-Windows-10" class="download-btn">Viws</a>
+    <h2 class="section-title"><i class="fa-solid fa-code"></i> Programming & Dev Tools</h2>
+    <div class="software-grid">
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon vscode-icon"><i class="fa-solid fa-file-code"></i></div>
+                <div class="box-content"><h3>VS Code</h3></div>
+            </div>
+            <p>Modern code editor for HTML, CSS, and JS development.</p>
+            <div class="btn-group">
+                <a href="Pdfs/vscode.pdf" class="btn btn-dl">Setup Guide</a>
+                <a href="https://code.visualstudio.com/" target="_blank" class="btn btn-view">Download</a>
+            </div>
+        </div>
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon java-icon"><i class="fa-brands fa-java"></i></div>
+                <div class="box-content"><h3>Java JDK</h3></div>
+            </div>
+            <p>Java Development Kit installation and Path configuration.</p>
+            <div class="btn-group">
+                <a href="Pdfs/jdk-install.pdf" class="btn btn-dl">Setup PDF</a>
+            </div>
+        </div>
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon gcc-icon"><i class="fa-solid fa-microchip"></i></div>
+                <div class="box-content"><h3>GCC Compiler</h3></div>
+            </div>
+            <p>MinGW installation for running C/C++ programs on Windows.</p>
+            <div class="btn-group">
+                <a href="Pdfs/gcc-guide.pdf" class="btn btn-dl">Guide PDF</a>
+            </div>
+        </div>
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon note-icon"><i class="fa-solid fa-note-sticky"></i></div>
+                <div class="box-content"><h3>Notepad++</h3></div>
+            </div>
+            <p>Fast and lightweight text editor for basic programming.</p>
+            <div class="btn-group">
+                <a href="https://notepad-plus-plus.org/downloads/" target="_blank" class="btn btn-view">Official Site</a>
+            </div>
         </div>
     </div>
 
-    <div class="software-box">
-        <h3>Google Chrome Browser</h3>
-        <p>Best practices for installing and setting up Chrome for development.</p>
-        <div class="btn-group">
-            <a href="#" class="download-btn outline-btn">Read Online</a>
-            <a href="#" class="download-btn">Download PDF</a>
+    <h2 class="section-title"><i class="fa-solid fa-briefcase"></i> Office & Browsing</h2>
+    <div class="software-grid">
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon office-icon"><i class="fa-solid fa-file-word"></i></div>
+                <div class="box-content"><h3>MS Office</h3></div>
+            </div>
+            <p>Installation guide for Word, Excel, and PowerPoint.</p>
+            <div class="btn-group">
+                <a href="Pdfs/microsoftoffice.pdf" class="btn btn-dl">Download Guide</a>
+            </div>
+        </div>
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon chrome-icon"><i class="fa-brands fa-chrome"></i></div>
+                <div class="box-content"><h3>Google Chrome</h3></div>
+            </div>
+            <p>Essential browser for web testing and daily internet use.</p>
+            <div class="btn-group">
+                <a href="https://www.google.com/chrome/" target="_blank" class="btn btn-view">Get Chrome</a>
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title"><i class="fa-solid fa-toolbox"></i> Essential Utilities</h2>
+    <div class="software-grid">
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon rar-icon"><i class="fa-solid fa-file-zipper"></i></div>
+                <div class="box-content"><h3>WinRAR</h3></div>
+            </div>
+            <p>Tool to extract .zip and .rar files easily.</p>
+            <div class="btn-group">
+                <a href="https://www.win-rar.com/download.html" target="_blank" class="btn btn-view">Download</a>
+            </div>
+        </div>
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon vlc-icon"><i class="fa-solid fa-video"></i></div>
+                <div class="box-content"><h3>VLC Player</h3></div>
+            </div>
+            <p>Universal media player for all audio/video formats.</p>
+            <div class="btn-group">
+                <a href="https://www.videolan.org/" target="_blank" class="btn btn-view">Get VLC</a>
+            </div>
+        </div>
+        <div class="software-box">
+            <div class="box-header">
+                <div class="box-icon driver-icon"><i class="fa-solid fa-gears"></i></div>
+                <div class="box-content"><h3>Driver Booster</h3></div>
+            </div>
+            <p>Keep your PC drivers updated automatically.</p>
+            <div class="btn-group">
+                <a href="https://www.iobit.com/en/driver-booster.php" target="_blank" class="btn btn-view">Install</a>
+            </div>
         </div>
     </div>
 
 </div>
 
 <footer>
-    © 2026 Smart ITI Project | Designed for Excellence
+    &copy; 2026 GITI Budhana | Built for ITI Excellence
 </footer>
 
 </body>
